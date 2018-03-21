@@ -1,0 +1,249 @@
+body,html{
+	width: 100%;
+	height: 100%;
+	padding:0px;
+	margin:0px;
+	overflow: hidden;
+}
+
+.main{
+	width: 100%;
+	height: 100%;
+}
+
+.trans{
+	opacity: 0;
+}
+
+.hidden{
+	display: none;
+}
+
+.toolbar{
+	position: absolute;
+	top: 1%;
+	right: 3%;
+	width: 25%;
+	height: 3%;
+}
+
+#toolbar_info{
+	float: right;
+}
+
+.toolbar img{
+	height: 100%;
+}
+
+.buttons{
+	width: 100%;
+	height: 100%;
+	text-align: right;
+	display: none;
+}
+
+.titles{
+	width: 100%;
+	height: 6%;
+	text-align: center;
+}
+
+.titles img{
+	height: 100%;
+}
+
+.content{
+	position: absolute;
+	height: 100%;
+    font-size: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.content > div{
+	margin: 0 auto;
+	padding-bottom: 60px;
+}
+
+.type1{
+	width: 90%;
+}
+
+.type1 img{
+	width: 45%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+
+.type2{
+	width: 90%;
+}
+
+.type2 img{
+	width: 45%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+
+.type3{
+	width: 90%;
+}
+
+.type3 img{
+	width: 45%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+
+.type4{
+	margin-top: 60px;
+	width: 90%;
+}
+
+.type4 img{
+	width: 45%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+
+.type5{
+	width: 85%;
+	padding-top: 20px;
+}
+
+.type5 img{
+	width: 42%;
+	margin-left: 4%;
+	margin-right: 4%;
+	margin-bottom: 15px;
+}
+
+.type6{
+	padding-top: 10px;
+	width: 75%;
+}
+
+.type6 img{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.type7{
+	padding-top: 10px;
+	width: 85%;
+}
+
+.type7 img{
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.menubg{
+	position: absolute;
+	bottom: 0;
+	left: 5%;
+	width: 90%;
+	opacity: 0.3;
+}
+
+.menuDiv{
+	position: absolute;
+	bottom: 0;
+	height: 8%;
+	width: 100%;
+	text-align: center;
+}
+
+.menus{
+	height: 100%;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.menu{
+    margin-top: 3%;
+    height: 60%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.menu.trans{
+	opacity: 0.3;
+}
+
+.book{
+	position: absolute;
+	width: 100%;
+	height: 92%;
+	display: none;
+}
+
+.book > div{
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.book_type1_1,.book_type2_2{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#type1_1_book_intro,#type2_2_book_intro{
+	width: 80%;
+	display: none;
+}
+
+#type1_1_video,#type2_2_video{
+	width: 30%;
+	display: none;
+}
+
+.book1_1_video,.book2_2_video{
+	margin-top: 50%;
+	width: 100%;
+	display: none;
+}
+
+.book1_1_pages,.book2_2_pages{
+	display: none;
+}
+
+.book1_1_pages img,.book2_2_pages img{
+	width: 100%;
+}
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+.swiper-slide {
+	text-align: center;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.buyPage{
+	width: 100%;
+	height: 100%;
+}
+
+.buyPage_bg{
+	width: 100%;
+	height: 100%;
+}
