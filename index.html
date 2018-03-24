@@ -11,186 +11,173 @@
 	<meta name="mobile-web-app-capable" content="yes" />
 
 	<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="swiper.min.js"></script>
+	<script type="text/javascript" src="preloadjs.min.js"></script>
 	<script type="text/javascript" src="index.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="index.css" />
-	<link rel="stylesheet" type="text/css" href="swiper.min.css" />
 </head>
 <body>
-	<div class="main">
+	<div class="loading">
+		<img src="resources/loading.gif">
+	</div>
+
+	<div class="top">
 		<div class="toolbar">
-			<img id="toolbar_info" onclick="javascript:toolbar_info_click()" class="toolbar_info" src="resources/toolbar_info.png">
+			<img id="toolbar_info" onclick="javascript:toolbar_info_click()" class="toolbar_info" _src="resources/toolbar_info.png">
 			<div class="buttons">
-				<img id="toolbar_1" onclick="javascript:toolbar_1_click()" src="resources/toolbar_1.png">
-				<img id="toolbar_2" onclick="javascript:toolbar_2_click()" src="resources/toolbar_2.png">
-				<img id="toolbar_3" onclick="javascript:toolbar_3_click()" src="resources/toolbar_3.png">
+				<img id="toolbar_1" onclick="javascript:toolbar_1_click()" _src="resources/toolbar_1.png">
+				<img id="toolbar_2" onclick="javascript:toolbar_2_click()" _src="resources/toolbar_2.png">
+				<img id="toolbar_3" onclick="javascript:toolbar_3_click()" _src="resources/toolbar_3.png">
 			</div>
-			<!-- <img src="resources/toolbar.png"> -->
 		</div>
 		<div class="titles">
-			<img class="title_type1" src="resources/title_1.png">
-			<img class="title_type2 hidden trans" src="resources/title_2.png">
-			<img class="title_type3 hidden trans" src="resources/title_3.png">
-			<img class="title_type4 hidden trans" src="resources/title_4.png">
-			<img class="title_type5 hidden trans" src="resources/title_5.png">
-			<img class="title_type6 hidden trans" src="resources/title_6.png">
-			<img class="title_type7 hidden trans" src="resources/title_7.png">
+			<img class="title_type1" _src="resources/title_1.png">
+			<img class="title_type2 hidden trans" _src="resources/title_2.png">
+			<img class="title_type3 hidden trans" _src="resources/title_3.png">
+			<img class="title_type4 hidden trans" _src="resources/title_4.png">
+			<img class="title_type5 hidden trans" _src="resources/title_5.png">
+			<img class="title_type6 hidden trans" _src="resources/title_6.png">
+			<img class="title_type7 hidden trans" _src="resources/title_7.png">
 		</div>
-		<div class="content">
+	</div>
+
+	<div class="main">
+		<div class="content scroll">
 			<div class="type1">
-				<img id="type1_1" onclick="javascript:type1_1_click()" src="resources/type1_1.png">
-				<img src="resources/type1_2.png">
-				<img src="resources/type1_3.png">
-				<img src="resources/type1_4.png">
-				<img src="resources/type1_5.png">
-				<img src="resources/type1_6.png">
-				<img src="resources/type1_7.png">
-				<img src="resources/type1_8.png">
-				<img src="resources/type1_9.png">
-				<img src="resources/type1_10.png">
+				<img id="type1_1" onclick="javascript:type1_1_click()" _src="resources/type1_1.png">
+				<img _src="resources/type1_2.png">
+				<img _src="resources/type1_3.png">
+				<img _src="resources/type1_4.png">
+				<img _src="resources/type1_5.png">
+				<img _src="resources/type1_6.png">
+				<img _src="resources/type1_7.png">
+				<img _src="resources/type1_8.png">
+				<img _src="resources/type1_9.png">
+				<img _src="resources/type1_10.png">
 			</div>
 			<div class="type2 hidden trans">
-				<img src="resources/type2_1.png">
-				<img id="type2_2" onclick="javascript:type2_2_click()" src="resources/type2_2.png">
-				<img src="resources/type2_3.png">
-				<img src="resources/type2_4.png">
-				<img src="resources/type2_5.png">
-				<img src="resources/type2_6.png">
-				<img src="resources/type2_7.png">
-				<img src="resources/type2_8.png">
-				<img src="resources/type2_9.png">
-				<img src="resources/type2_10.png">
+				<img _src="resources/type2_1.png">
+				<img id="type2_2" onclick="javascript:type2_2_click()" _src="resources/type2_2.png">
+				<img _src="resources/type2_3.png">
+				<img _src="resources/type2_4.png">
+				<img _src="resources/type2_5.png">
+				<img _src="resources/type2_6.png">
+				<img _src="resources/type2_7.png">
+				<img _src="resources/type2_8.png">
+				<img _src="resources/type2_9.png">
+				<img _src="resources/type2_10.png">
 			</div>
 			<div class="type3 hidden trans">
-				<img src="resources/type3_1.png">
-				<img src="resources/type3_2.png">
-				<img src="resources/type3_3.png">
-				<img src="resources/type3_4.png">
-				<img src="resources/type3_5.png">
-				<img src="resources/type3_6.png">
-				<img src="resources/type3_7.png">
-				<img src="resources/type3_8.png">
-				<img src="resources/type3_9.png">
-				<img src="resources/type3_10.png">
+				<img _src="resources/type3_1.png">
+				<img _src="resources/type3_2.png">
+				<img _src="resources/type3_3.png">
+				<img _src="resources/type3_4.png">
+				<img _src="resources/type3_5.png">
+				<img _src="resources/type3_6.png">
+				<img _src="resources/type3_7.png">
+				<img _src="resources/type3_8.png">
+				<img _src="resources/type3_9.png">
+				<img _src="resources/type3_10.png">
 			</div>
 			<div class="type4 hidden trans">
-				<img src="resources/type4_1.png">
-				<img src="resources/type4_2.png">
-				<img src="resources/type4_3.png">
-				<img src="resources/type4_4.png">
-				<img src="resources/type4_5.png">
-				<img src="resources/type4_6.png">
-				<img src="resources/type4_7.png">
-				<img src="resources/type4_8.png">
-				<img src="resources/type4_9.png">
-				<img src="resources/type4_10.png">
+				<img _src="resources/type4_1.png">
+				<img _src="resources/type4_2.png">
+				<img _src="resources/type4_3.png">
+				<img _src="resources/type4_4.png">
+				<img _src="resources/type4_5.png">
+				<img _src="resources/type4_6.png">
+				<img _src="resources/type4_7.png">
+				<img _src="resources/type4_8.png">
+				<img _src="resources/type4_9.png">
+				<img _src="resources/type4_10.png">
 			</div>
 			<div class="type5 hidden trans">
-				<img src="resources/type5_1.png">
-				<img src="resources/type5_2.png">
-				<img src="resources/type5_3.png">
-				<img src="resources/type5_4.png">
+				<img _src="resources/type5_1.png">
+				<img _src="resources/type5_2.png">
+				<img _src="resources/type5_3.png">
+				<img _src="resources/type5_4.png">
 			</div>
 			<div class="type6 hidden trans">
-				<img src="resources/type6_1.png">
-				<img src="resources/type6_2.png">
-				<img src="resources/type6_3.png">
+				<img _src="resources/type6_1.png">
+				<img _src="resources/type6_2.png">
+				<img _src="resources/type6_3.png">
 			</div>
 			<div class="type7 hidden trans">
-				<img src="resources/type7_1.png">
-				<img src="resources/type7_2.png">
+				<img _src="resources/type7_1.png">
+				<img _src="resources/type7_2.png">
 			</div>
 		</div>
 	</div>
 
-	<img class="menubg" src="resources/menu_bg.png">
+	<img class="menubg" _src="resources/menu_bg.png">
 	<div class="menuDiv">
 		<div class="menus">
-			<img id="type1" class="menu" src="resources/menu_1.png">
-			<img id="type2" class="menu trans" src="resources/menu_2.png">
-			<img id="type3" class="menu trans" src="resources/menu_3.png">
-			<img id="type4" class="menu trans" src="resources/menu_4.png">
-			<img id="type5" class="menu trans" src="resources/menu_5.png">
-			<img id="type6" class="menu trans" src="resources/menu_6.png">
-			<img id="type7" class="menu trans" src="resources/menu_7.png">
+			<img id="type1" class="menu" _src="resources/menu_1.png">
+			<img id="type2" class="menu trans" _src="resources/menu_2.png">
+			<img id="type3" class="menu trans" _src="resources/menu_3.png">
+			<img id="type4" class="menu trans" _src="resources/menu_4.png">
+			<img id="type5" class="menu trans" _src="resources/menu_5.png">
+			<img id="type6" class="menu trans" _src="resources/menu_6.png">
+			<img id="type7" class="menu trans" _src="resources/menu_7.png">
 		</div>
 	</div>
 
 	<div class="book">
 		<div class="book1_1">
-			<img id="type1_1_book" src="resources/type1_1/book.png">
+			<img id="type1_1_book" _src="resources/type1_1/book.png">
 			<div class="book_type1_1">
-				<img id="type1_1_book_intro" src="resources/type1_1/book_intro.png">
-				<img id="type1_1_video" onclick="javascript:type1_1_video_click()" src="resources/type1_1/video.png">
+				<img id="type1_1_book_intro" _src="resources/type1_1/book_intro.png">
+				<img id="type1_1_video" onclick="javascript:type1_1_video_click()" _src="resources/type1_1/video.png">
 			</div>
-			<video class="book1_1_video" src="resources/type1_1/video.mp4" preload></video>
+			<video class="book1_1_video" _src="resources/type1_1/video.mp4"></video>
 		</div>
 		<div class="book1_1_pages">
-			<div class="swiper-container sc1">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_1.png"></div>
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_2.png"></div>
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_3.png"></div>
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_4.png"></div>
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_5.png"></div>
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_6.png"></div>
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_7.png"></div>
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_8.png"></div>
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_9.png"></div>
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_10.png"></div>
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_11.png"></div>
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_12.png"></div>
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_13.png"></div>
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_14.png"></div>
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_15.png"></div>
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_16.png"></div>
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_17.png"></div>
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_18.png"></div>
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_19.png"></div>
-					<div class="swiper-slide"><img src="resources/type1_1/pages/page_20.png"></div>
-					<div class="swiper-slide">
-						<div class="buyPage">
-							<img class="buyPage_bg" src="resources/type1_1/page.png">
-						</div>
-					</div>
+			<img _src="resources/type1_1/pages/page_1.png">
+			<div class="buyPage">
+				<img class="buyPage_bg" _src="resources/type1_1/bg.png">
+				<div class="buyPage_imgs">
+					<img class="img_book" src="resources/type1_1/book.png">
+					<img class="img_price" src="resources/type1_1/price.png">
+					<img class="img_buy" src="resources/type1_1/buy.png">
+					<img class="img_cart" src="resources/type1_1/cart.png">
+					<img class="img_book_intro" src="resources/type1_1/book_intro.png">
 				</div>
 			</div>
 		</div>
 
 		<div class="book2_2">
-			<img id="type2_2_book" src="resources/type2_2/book.png">
+			<img id="type2_2_book" _src="resources/type2_2/book.png">
 			<div class="book_type2_2">
-				<img id="type2_2_book_intro" src="resources/type2_2/book_intro.png">
-				<img id="type2_2_video" onclick="javascript:type2_2_video_click()" src="resources/type2_2/video.png">
+				<img id="type2_2_book_intro" _src="resources/type2_2/book_intro.png">
+				<img id="type2_2_video" onclick="javascript:type2_2_video_click()" _src="resources/type2_2/video.png">
 			</div>
-			<video class="book2_2_video" src="resources/type2_2/video.mp4" preload></video>
+			<video class="book2_2_video" _src="resources/type2_2/video.mp4"></video>
 		</div>
 		<div class="book2_2_pages">
 			<div class="swiper-container sc2">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide"><img src="resources/type2_2/pages/page_1.png"></div>
-					<div class="swiper-slide"><img src="resources/type2_2/pages/page_2.png"></div>
-					<div class="swiper-slide"><img src="resources/type2_2/pages/page_3.png"></div>
-					<div class="swiper-slide"><img src="resources/type2_2/pages/page_4.png"></div>
-					<div class="swiper-slide"><img src="resources/type2_2/pages/page_5.png"></div>
-					<div class="swiper-slide"><img src="resources/type2_2/pages/page_6.png"></div>
-					<div class="swiper-slide"><img src="resources/type2_2/pages/page_7.png"></div>
-					<div class="swiper-slide"><img src="resources/type2_2/pages/page_8.png"></div>
-					<div class="swiper-slide"><img src="resources/type2_2/pages/page_9.png"></div>
-					<div class="swiper-slide"><img src="resources/type2_2/pages/page_10.png"></div>
-					<div class="swiper-slide"><img src="resources/type2_2/pages/page_11.png"></div>
-					<div class="swiper-slide"><img src="resources/type2_2/pages/page_12.png"></div>
-					<div class="swiper-slide"><img src="resources/type2_2/pages/page_13.png"></div>
-					<div class="swiper-slide"><img src="resources/type2_2/pages/page_14.png"></div>
-					<div class="swiper-slide"><img src="resources/type2_2/pages/page_15.png"></div>
-					<div class="swiper-slide"><img src="resources/type2_2/pages/page_16.png"></div>
-					<div class="swiper-slide"><img src="resources/type2_2/pages/page_17.png"></div>
-					<div class="swiper-slide"><img src="resources/type2_2/pages/page_18.png"></div>
-					<div class="swiper-slide"><img src="resources/type2_2/pages/page_19.png"></div>
+					<div class="swiper-slide"><img _src="resources/type2_2/pages/page_1.png"></div>
+					<div class="swiper-slide"><img _src="resources/type2_2/pages/page_2.png"></div>
+					<div class="swiper-slide"><img _src="resources/type2_2/pages/page_3.png"></div>
+					<div class="swiper-slide"><img _src="resources/type2_2/pages/page_4.png"></div>
+					<div class="swiper-slide"><img _src="resources/type2_2/pages/page_5.png"></div>
+					<div class="swiper-slide"><img _src="resources/type2_2/pages/page_6.png"></div>
+					<div class="swiper-slide"><img _src="resources/type2_2/pages/page_7.png"></div>
+					<div class="swiper-slide"><img _src="resources/type2_2/pages/page_8.png"></div>
+					<div class="swiper-slide"><img _src="resources/type2_2/pages/page_9.png"></div>
+					<div class="swiper-slide"><img _src="resources/type2_2/pages/page_10.png"></div>
+					<div class="swiper-slide"><img _src="resources/type2_2/pages/page_11.png"></div>
+					<div class="swiper-slide"><img _src="resources/type2_2/pages/page_12.png"></div>
+					<div class="swiper-slide"><img _src="resources/type2_2/pages/page_13.png"></div>
+					<div class="swiper-slide"><img _src="resources/type2_2/pages/page_14.png"></div>
+					<div class="swiper-slide"><img _src="resources/type2_2/pages/page_15.png"></div>
+					<div class="swiper-slide"><img _src="resources/type2_2/pages/page_16.png"></div>
+					<div class="swiper-slide"><img _src="resources/type2_2/pages/page_17.png"></div>
+					<div class="swiper-slide"><img _src="resources/type2_2/pages/page_18.png"></div>
+					<div class="swiper-slide"><img _src="resources/type2_2/pages/page_19.png"></div>
 					<div class="swiper-slide">
 						<div class="buyPage">
-							<img class="buyPage_bg" src="resources/type2_2/page.png">
+							<img class="buyPage_bg" _src="resources/type2_2/page.png">
 						</div>
 					</div>
 				</div>

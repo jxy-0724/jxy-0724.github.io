@@ -3,7 +3,29 @@ body,html{
 	height: 100%;
 	padding:0px;
 	margin:0px;
-	overflow: hidden;
+	overflow-x: hidden;
+	background-color: #ffffff;
+	font-size: 0;
+}
+
+.loading{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: #ffffff;
+	display: flex;
+	align-items: center;
+	z-index: 10000;
+}
+
+.loading > img{
+	width: 100%;
+}
+
+.scroll{
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
 }
 
 .main{
@@ -19,12 +41,29 @@ body,html{
 	display: none;
 }
 
+.top{
+	position: fixed;
+    top: 0;
+	width: 100%;
+	height: 6vh;
+	background-color: #ffffff;
+	z-index: 999;
+}
+
+.bottom{
+	position: fixed;
+	bottom: 0;
+	height: 8vh;
+	width: 100%;
+	text-align: center;
+}
+
 .toolbar{
 	position: absolute;
-	top: 1%;
-	right: 3%;
+	top: 5px;
+	right: 5px;
 	width: 25%;
-	height: 3%;
+	height: 25px;
 }
 
 #toolbar_info{
@@ -44,7 +83,7 @@ body,html{
 
 .titles{
 	width: 100%;
-	height: 6%;
+	height: 100%;
 	text-align: center;
 }
 
@@ -54,20 +93,19 @@ body,html{
 
 .content{
 	position: absolute;
+	width: 100%;
 	height: 100%;
-    font-size: 0;
-	overflow-x: hidden;
-	overflow-y: auto;
-	-webkit-overflow-scrolling: touch;
+	top: 6%;
 }
 
 .content > div{
 	margin: 0 auto;
-	padding-bottom: 60px;
+	padding-bottom: 110px;
 }
 
 .type1{
 	width: 90%;
+	margin-bottom: 110px;
 }
 
 .type1 img{
@@ -109,7 +147,7 @@ body,html{
 
 .type5{
 	width: 85%;
-	padding-top: 20px;
+	padding-top: 30px;
 }
 
 .type5 img{
@@ -130,29 +168,31 @@ body,html{
 }
 
 .type7{
-	padding-top: 10px;
+	padding-top: 30px;
 	width: 85%;
 }
 
 .type7 img{
 	width: 100%;
-	margin-bottom: 40px;
+	margin-bottom: 35px;
 }
 
 .menubg{
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	left: 5%;
 	width: 90%;
 	opacity: 0.3;
+	z-index: 999;
 }
 
 .menuDiv{
-	position: absolute;
+	position: fixed;
 	bottom: 0;
-	height: 8%;
+	height: 8vh;
 	width: 100%;
 	text-align: center;
+	z-index: 999;
 }
 
 .menus{
@@ -174,8 +214,8 @@ body,html{
 
 .book{
 	position: absolute;
-	width: 100%;
-	height: 92%;
+	width: 100vw;
+	height: 100vh;
 	display: none;
 }
 
@@ -209,41 +249,60 @@ body,html{
 }
 
 .book1_1_pages,.book2_2_pages{
-	display: none;
-}
-
-.book1_1_pages img,.book2_2_pages img{
-	width: 100%;
-}
-
-.swiper-container {
-	width: 100%;
-	height: 100%;
-}
-.swiper-slide {
-	text-align: center;
-
-	/* Center slide text vertically */
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
-	align-items: center;
+    align-items: center;
+}
+
+.book1_1_pages > img,.book2_2_pages > img{
+	width: 100%;
 }
 
 .buyPage{
 	width: 100%;
 	height: 100%;
+	display: none;
 }
 
 .buyPage_bg{
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+.buyPage_imgs{
+	position: relative;
+	width: 55%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.buyPage_imgs .img_book{
+	width: 100%;
+	padding-top: 8vh;
+}
+
+.buyPage_imgs .img_price{
+	height: 6vh;
+	padding-top: 1vh;
+	display: block;
+}
+
+.buyPage_imgs .img_buy{
+	height: 7vh;
+	padding-top: 0.5vh;
+	display: inline-block;
+}
+
+.buyPage_imgs .img_cart{
+	height: 7vh;
+	padding-top: 0.5vh;
+	display: inline-block;
+}
+
+.buyPage_imgs .img_book_intro{
+    width: 100%;
+	padding-top: 2vh;
+	display: inline-block;
 }
