@@ -98,6 +98,7 @@ window.onload = function() {
 	});
 
 	init_book1_1();
+	init_book2_2();
 }
 
 function init_book1_1(){
@@ -106,12 +107,36 @@ function init_book1_1(){
 		start = e.touches[0].clientY;
 	});
 	$('.book1_1_pages').on('touchend',function(e){
+		if(playingAnimation){
+			return;
+		}
+
 		let end = e.changedTouches[0].clientY;
 		if(start - end > 50){
 			book1_1_showNextImage();
 		}
 		if(end - start > 50){
 			book1_1_showLastImage();
+		}
+	});
+}
+
+function init_book2_2(){
+	let start;
+	$('.book2_2_pages').on('touchstart',function(e){
+		start = e.touches[0].clientY;
+	});
+	$('.book2_2_pages').on('touchend',function(e){
+		if(playingAnimation){
+			return;
+		}
+
+		let end = e.changedTouches[0].clientY;
+		if(start - end > 50){
+			book2_2_showNextImage();
+		}
+		if(end - start > 50){
+			book2_2_showLastImage();
 		}
 	});
 }
@@ -212,27 +237,53 @@ function type1_1_video_ended(){
 
 var book1_1_imageNo = 1;
 function book1_1_showNextImage(){
-	if(book1_1_imageNo < 20){
+	book1_1_imageNo++;
+	if(book1_1_imageNo < 21){
 		$('.book1_1_pages > img').attr('src','resources/type1_1/pages/page_'+book1_1_imageNo+'.png');
-		book1_1_imageNo++;
-	}else{
+	}else if(book1_1_imageNo == 21){
+		playingAnimation = true;
+
 		$('.book1_1_pages > img').hide();
 		$('.buyPage').show();
+
+		$('.buyPage_imgs > img').css('opacity',0);
+		$('.buyPage_imgs > img[class!=img_book]').hide();
+		$('.img_book').css('padding-top','25vh');
+		$('.img_book').animate({
+			'opacity' : 1
+		},500).animate({
+			'padding-top' : '0'
+		},500,
+		function(){
+			$('.buyPage_imgs > img[class!=img_book]').show();
+			$('.buyPage_imgs > img[class!=img_book]').animate({
+				'opacity' : 1
+			},500,
+			function(){
+				playingAnimation = false;
+			});
+		});
 	}
 }
 
 function book1_1_showLastImage(){
-	if(book1_1_imageNo > 1){
+	if(book1_1_imageNo > 21){
+		book1_1_imageNo = 21;
+	}
+	book1_1_imageNo--;
+	if(book1_1_imageNo > 0){
 		if($('.book1_1_pages > img').is(":visible")){
-			$('.book1_1_pages > img').attr('src','resources/type1_1/pages/page_'+book1_1_imageNo+'.png');
-			book1_1_imageNo--;
+			$('.book1_1_pages > img').attr('src','resources/type1_1/pages/page_'+book1_1_imageNo+'.png');	
 		}else{
 			$('.book1_1_pages > img').show();
 			$('.buyPage').hide();
 		}
+	}else{
+		book1_1_imageNo = 1;
 	}
 }
 
+// book2_2
 function type2_2_click(){
 	$('#type2_2_book').offset($('#type2_2').offset());
 	$('#type2_2_book').width($('#type2_2').width());
@@ -241,6 +292,8 @@ function type2_2_click(){
 	$('.book').show();
 	$('.book > div').hide();
 	$('.book2_2').show();
+	$('#type2_2_book_intro').hide();
+	$("#type2_2_video").hide();
 
 	$('#type2_2_book').animate({
 		'width' : '58%',
@@ -250,17 +303,84 @@ function type2_2_click(){
 	function(){
 		$("#type2_2_book_intro").show();
 		$("#type2_2_video").show();
+		allowScroll = false;
+
+		let start;
+		$('.book2_2').on('touchstart',function(e){
+			start = e.touches[0].clientY;
+		});
+		$('.book2_2').on('touchend',function(e){
+			let end = e.changedTouches[0].clientY;
+			if(start - end > 50){
+				type2_2_video_ended();
+			}
+		});
 	});
 }
 
-function type2_2_video_click (){
+function type2_2_video_click(){
 	$("#type2_2_book").hide();
 	$('.book_type2_2').hide();
 	$('.book2_2_video').show();
 
 	$('.book2_2_video')[0].play();
-	$('.book2_2_video').on('ended',function(){
-		$('.book2_2').hide();
-		$('.book2_2_pages').show();
-	});
+	$('.book2_2_video').on('ended',type2_2_video_ended);
+}
+
+function type2_2_video_ended(){
+	$('.book2_2').hide();
+	$('.book2_2_pages').show();
+
+	book2_2_imageNo = 1;
+	$('.book2_2_pages > img').attr('src','resources/type2_2/pages/page_'+book2_2_imageNo+'.png');
+	$('.book2_2_pages > img').show();
+	$('.buyPage').hide();
+}
+
+var book2_2_imageNo = 1;
+function book2_2_showNextImage(){
+	book2_2_imageNo++;
+	if(book2_2_imageNo < 20){
+		$('.book2_2_pages > img').attr('src','resources/type2_2/pages/page_'+book2_2_imageNo+'.png');
+	}else if(book2_2_imageNo == 20){
+		playingAnimation = true;
+
+		$('.book2_2_pages > img').hide();
+		$('.buyPage').show();
+
+		$('.buyPage_imgs > img').css('opacity',0);
+		$('.buyPage_imgs > img[class!=img_book]').hide();
+		$('.img_book').css('padding-top','25vh');
+		$('.img_book').animate({
+			'opacity' : 1
+		},500).animate({
+			'padding-top' : '0'
+		},500,
+		function(){
+			$('.buyPage_imgs > img[class!=img_book]').show();
+			$('.buyPage_imgs > img[class!=img_book]').animate({
+				'opacity' : 1
+			},500,
+			function(){
+				playingAnimation = false;
+			});
+		});
+	}
+}
+
+function book2_2_showLastImage(){
+	if(book2_2_imageNo > 20){
+		book2_2_imageNo = 20;
+	}
+	book2_2_imageNo--;
+	if(book2_2_imageNo > 0){
+		if($('.book2_2_pages > img').is(":visible")){
+			$('.book2_2_pages > img').attr('src','resources/type2_2/pages/page_'+book2_2_imageNo+'.png');	
+		}else{
+			$('.book2_2_pages > img').show();
+			$('.buyPage').hide();
+		}
+	}else{
+		book2_2_imageNo = 1;
+	}
 }

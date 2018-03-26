@@ -63,7 +63,7 @@ body,html{
 	top: 5px;
 	right: 5px;
 	width: 25%;
-	height: 25px;
+	height: 4vh;
 }
 
 #toolbar_info{
@@ -79,6 +79,10 @@ body,html{
 	height: 100%;
 	text-align: right;
 	display: none;
+}
+
+.buttons > img{
+	margin-right: 1vw;
 }
 
 .titles{
@@ -216,12 +220,13 @@ body,html{
 	position: absolute;
 	width: 100vw;
 	height: 100vh;
-	display: none;
+    display: none;
+    align-items: center;
 }
 
 .book > div{
 	width: 100%;
-	height: 100%;
+	padding-top: 8vh;
 	display: none;
 }
 
@@ -280,7 +285,6 @@ body,html{
 
 .buyPage_imgs .img_book{
 	width: 100%;
-	padding-top: 8vh;
 }
 
 .buyPage_imgs .img_price{
@@ -290,13 +294,13 @@ body,html{
 }
 
 .buyPage_imgs .img_buy{
-	height: 7vh;
+	height: 6vh;
 	padding-top: 0.5vh;
 	display: inline-block;
 }
 
 .buyPage_imgs .img_cart{
-	height: 7vh;
+	height: 6vh;
 	padding-top: 0.5vh;
 	display: inline-block;
 }
