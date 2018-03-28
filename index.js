@@ -5,7 +5,7 @@ var imgs;
 var allowScroll = true;
 
 window.onload = function() {
-	var queue = new createjs.LoadQueue(false);
+	let queue = new createjs.LoadQueue(false);
 	imgs = document.images;
 	for(img of imgs){
 		let _src = $(img).attr('_src');
@@ -149,7 +149,23 @@ function queueOnComplete(){
 		}
 	}
 
+	let queue = new createjs.LoadQueue(false);
+	for(img of imgs){
+		let __src = $(img).attr('__src');
+		if(__src){
+			queue.loadFile(__src);
+		}
+	}
+	queue.on("fileload",fileOnLoad);
+
 	$('.loading').remove();
+}
+
+function fileOnLoad(event){
+	let img = $('img[__src="'+event.item.id+'"]');
+	if(img && img.attr('src') == null){
+		img.attr('src',img.attr('__src'));
+	}
 }
 
 function toolbar_info_click(){
