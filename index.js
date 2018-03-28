@@ -236,6 +236,9 @@ function type1_1_video_ended(){
 }
 
 var book1_1_imageNo = 1;
+// 1~20 序列帧
+// 21 购物
+const book1_1_imageMaxNo = 21;
 function book1_1_showNextImage(){
 	book1_1_imageNo++;
 	if(book1_1_imageNo < 21){
@@ -243,7 +246,7 @@ function book1_1_showNextImage(){
 	}else if(book1_1_imageNo == 21){
 		playingAnimation = true;
 
-		$('.book1_1_pages > img').hide();
+		$('.book1_1_pages').children().hide();
 		$('.buyPage').show();
 
 		$('.buyPage_imgs > img').css('opacity',0);
@@ -267,8 +270,8 @@ function book1_1_showNextImage(){
 }
 
 function book1_1_showLastImage(){
-	if(book1_1_imageNo > 21){
-		book1_1_imageNo = 21;
+	if(book1_1_imageNo > book1_1_imageMaxNo){
+		book1_1_imageNo = book1_1_imageMaxNo;
 	}
 	book1_1_imageNo--;
 	if(book1_1_imageNo > 0){
@@ -338,6 +341,10 @@ function type2_2_video_ended(){
 }
 
 var book2_2_imageNo = 1;
+// 1~19 序列帧
+// 20 购物
+// 21 详情
+const book2_2_imageMaxNo = 21;
 function book2_2_showNextImage(){
 	book2_2_imageNo++;
 	if(book2_2_imageNo < 20){
@@ -345,8 +352,8 @@ function book2_2_showNextImage(){
 	}else if(book2_2_imageNo == 20){
 		playingAnimation = true;
 
-		$('.book2_2_pages > img').hide();
-		$('.buyPage').show();
+		$('.book2_2_pages').children().hide();
+		$('.book2_2_pages .buyPage').show();
 
 		$('.buyPage_imgs > img').css('opacity',0);
 		$('.buyPage_imgs > img[class!=img_book]').hide();
@@ -365,22 +372,70 @@ function book2_2_showNextImage(){
 				playingAnimation = false;
 			});
 		});
+	}else if(book2_2_imageNo == 21){
+		$('.book2_2_pages').children().hide();
+		$('.book2_2_pages .introPage').show();
+
+		allowScroll = true;
 	}
 }
 
 function book2_2_showLastImage(){
-	if(book2_2_imageNo > 20){
-		book2_2_imageNo = 20;
+	if(book2_2_imageNo > book2_2_imageMaxNo){
+		book2_2_imageNo = book2_2_imageMaxNo;
 	}
+
+	if(book2_2_imageNo == book2_2_imageMaxNo && window.pageYOffset > 0){
+		return;
+	}
+
 	book2_2_imageNo--;
 	if(book2_2_imageNo > 0){
-		if($('.book2_2_pages > img').is(":visible")){
-			$('.book2_2_pages > img').attr('src','resources/type2_2/pages/page_'+book2_2_imageNo+'.png');	
-		}else{
+		if(book2_2_imageNo < 20){
+			$('.book2_2_pages').children().hide();
 			$('.book2_2_pages > img').show();
-			$('.buyPage').hide();
+			$('.book2_2_pages > img').attr('src','resources/type2_2/pages/page_'+book2_2_imageNo+'.png');	
+		}else if(book2_2_imageNo == 20){
+			$('.book2_2_pages').children().hide();
+			$('.book2_2_pages .buyPage').show();
+			allowScroll = false;
 		}
 	}else{
 		book2_2_imageNo = 1;
 	}
+}
+
+function type6_1_click(){
+	$('.main').hide();
+	$('.book').show();
+	$('.book > div').hide();
+	$('.book6_1').show();
+}
+
+function type6_2_click(){
+	$('.main').hide();
+	$('.book').show();
+	$('.book > div').hide();
+	$('.book6_2').show();
+}
+
+function type6_3_click(){
+	$('.main').hide();
+	$('.book').show();
+	$('.book > div').hide();
+	$('.book6_3').show();
+}
+
+function type7_1_click(){
+	$('.main').hide();
+	$('.book').show();
+	$('.book > div').hide();
+	$('.book7_1').show();
+}
+
+function type7_2_click(){
+	$('.main').hide();
+	$('.book').show();
+	$('.book > div').hide();
+	$('.book7_2').show();
 }

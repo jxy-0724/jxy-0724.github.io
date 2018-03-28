@@ -97,19 +97,19 @@ body,html{
 
 .content{
 	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 6%;
+	width: 100vw;
+	height: 94vh;
+	top: 6vh;
 }
 
 .content > div{
 	margin: 0 auto;
-	padding-bottom: 110px;
+	padding-bottom: 8vh;
 }
 
 .type1{
 	width: 90%;
-	margin-bottom: 110px;
+	margin-bottom: 8vh;
 }
 
 .type1 img{
@@ -294,13 +294,13 @@ body,html{
 }
 
 .buyPage_imgs .img_buy{
-	height: 6vh;
+	width: 29.55%;
 	padding-top: 0.5vh;
 	display: inline-block;
 }
 
 .buyPage_imgs .img_cart{
-	height: 6vh;
+	width: 40.45%;
 	padding-top: 0.5vh;
 	display: inline-block;
 }
@@ -309,4 +309,26 @@ body,html{
     width: 100%;
 	padding-top: 2vh;
 	display: inline-block;
+}
+
+.introPage{
+	width: 100%;
+	display: none;
+}
+
+.introPage img{
+	width: 100%;
+}
+
+.book6_1,.book6_2,.book6_3{
+	width: 100%;
+	padding-bottom: 8vh;
+}
+
+.book7_1,.book7_2{
+	width: 100%;
+}
+
+.book6_1 > img,.book6_2 > img,.book6_3 > img,.book7_1 > img,.book7_2 > img{
+	width: 100%;
 }
